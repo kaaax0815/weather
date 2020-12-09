@@ -1,0 +1,22 @@
+﻿<Window x:Class="Weather_GUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Weather_GUI"
+        mc:Ignorable="d"
+        Title="Weather GUI" Height="450" Width="Auto" SizeToContent="Width" Icon="Weather.ico">
+    <DataGrid Name="Weather_Grid" AutoGenerateColumns="False" AlternationCount="2" CanUserAddRows="false" AlternatingRowBackground="LightGray">
+        <DataGrid.Columns>
+            <DataGridTextColumn Header="Date Range" Binding="{Binding Range}" CanUserSort="False" CanUserReorder="False" CanUserResize="False" IsReadOnly="True" />
+            <DataGridTextColumn Header="Weather" Binding="{Binding Weather}" CanUserSort="False" CanUserReorder="False" CanUserResize="False" IsReadOnly="True" />
+            <DataGridTextColumn Header="Precipitation" Binding="{Binding Precipitation}" CanUserSort="False" CanUserReorder="False" CanUserResize="False" IsReadOnly="True" />
+            <DataGridTextColumn Header="Wind Speed" Binding="{Binding Wind_Speed}" CanUserSort="False" CanUserReorder="False" CanUserResize="False" IsReadOnly="True" />
+            <DataGridTextColumn Header="Wind Direction" Binding="{Binding Wind_Direction}" CanUserSort="False" CanUserReorder="False" CanUserResize="False" IsReadOnly="True" />
+            <DataGridTextColumn Header="Temperature" Binding="{Binding Temperature}" CanUserSort="False" CanUserReorder="False" CanUserResize="False" IsReadOnly="True" />
+            <DataGridTextColumn Header="Feels Like" Binding="{Binding Feels_Like}" CanUserSort="False" CanUserReorder="False" CanUserResize="False" IsReadOnly="True" />
+            <DataGridTextColumn Header="Humidity" Binding="{Binding Humidity}" CanUserSort="False" CanUserReorder="False" CanUserResize="False" IsReadOnly="True" />
+            <DataGridTextColumn Header="Clouds" Binding="{Binding Clouds}" CanUserSort="False" CanUserReorder="False" CanUserResize="False" IsReadOnly="True" />
+        </DataGrid.Columns>
+    </DataGrid>
+</Window>
