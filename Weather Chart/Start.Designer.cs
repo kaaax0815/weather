@@ -38,7 +38,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Start";
-            this.Text = "Start";
+            this.Text = "Weather Chart";
             this.Load += new System.EventHandler(this.Start_Load);
             this.ResumeLayout(false);
 
