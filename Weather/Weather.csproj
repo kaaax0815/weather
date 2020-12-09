@@ -9,6 +9,8 @@
     <Copyright>GPL-3.0</Copyright>
     <PackageProjectUrl>https://github.com/kaaax0815/weather</PackageProjectUrl>
     <NeutralLanguage>en</NeutralLanguage>
+    <Version>0.0.1.0</Version>
+    <Description>Weather Console Application written in C#</Description>
   </PropertyGroup>
 
   <ItemGroup>
