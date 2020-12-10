@@ -74,6 +74,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Weather.xaml.cs">
+      <DependentUpon>Weather.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -86,6 +89,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Weather.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -127,6 +134,37 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icons\01d.png" />
+    <Resource Include="icons\01n.png" />
+    <Resource Include="icons\02d.png" />
+    <Resource Include="icons\02n.png" />
+    <Resource Include="icons\03d.png" />
+    <Resource Include="icons\03n.png" />
+    <Resource Include="icons\04d.png" />
+    <Resource Include="icons\04n.png" />
+    <Resource Include="icons\09d.png" />
+    <Resource Include="icons\09n.png" />
+    <Resource Include="icons\10d.png" />
+    <Resource Include="icons\10n.png" />
+    <Resource Include="icons\11d.png" />
+    <Resource Include="icons\11n.png" />
+    <Resource Include="icons\1232n.png" />
+    <Resource Include="icons\13d.png" />
+    <Resource Include="icons\13n.png" />
+    <Resource Include="icons\50d.png" />
+    <Resource Include="icons\50n.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icons\bug.png" />
+    <Resource Include="icons\credits.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icons\exit.png" />
+    <Resource Include="icons\homepage.png" />
+    <Resource Include="icons\language.png" />
+    <Resource Include="icons\location.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

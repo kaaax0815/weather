@@ -1,0 +1,63 @@
+﻿<Window x:Class="Weather_GUI.Weather_Now"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Weather_GUI"
+        mc:Ignorable="d"
+        Title="Current Weather" Height="351" Width="351" Icon="Weather.ico" ResizeMode="CanMinimize">
+    <Grid>
+        <Grid Opacity="1" Margin="10">
+            <Image Name="Image"  HorizontalAlignment="Left" VerticalAlignment="Top" Stretch="UniformToFill" Source="/icons/01d.png"/>
+        </Grid>
+        <Grid Background="#7FFFFFFF">
+            <TextBlock Name="City_txt" HorizontalAlignment="Left" Margin="10,33,0,0" TextWrapping="Wrap" Text="City_txt" VerticalAlignment="Top" FontSize="20"/>
+            <TextBlock Name="Date_txt" HorizontalAlignment="Left" Margin="10,60,0,0" TextWrapping="Wrap" Text="Date_txt" VerticalAlignment="Top" FontSize="20"/>
+            <StackPanel Height="100" Margin="71,148,71,0" VerticalAlignment="Top">
+                <TextBlock Name="Degrees_txt" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Degrees_txt" VerticalAlignment="Top" FontSize="20"/>
+                <TextBlock Name="Clouds_txt" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Clouds_txt" VerticalAlignment="Top" FontSize="20"/>
+                <TextBlock Name="Weather_txt" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Weather_txt" VerticalAlignment="Top" FontSize="20"/>
+            </StackPanel>
+            <DockPanel Margin="0,0,0,294" Height="Auto">
+                <Menu DockPanel.Dock="Top">
+                    <MenuItem Header="_Settings">
+                        <MenuItem Header="_Change City" Name="city_item">
+                            <MenuItem.Icon>
+                                <Image Source="/icons/location.png" />
+                            </MenuItem.Icon>
+                        </MenuItem>
+                        <MenuItem Header="_Change Language" Name="lang_item">
+                            <MenuItem.Icon>
+                                <Image Source="/icons/language.png" />
+                            </MenuItem.Icon>
+                        </MenuItem>
+                        <Separator />
+                        <MenuItem Header="_Exit" Name="exit_item">
+                            <MenuItem.Icon>
+                                <Image Source="/icons/exit.png" />
+                            </MenuItem.Icon>
+                        </MenuItem>
+                    </MenuItem>
+                    <MenuItem Header="_About">
+                        <MenuItem Header="_Credits" Name="credits_item">
+                            <MenuItem.Icon>
+                                <Image Source="/icons/credits.png" />
+                            </MenuItem.Icon>
+                        </MenuItem>
+                        <MenuItem Header="_Report Bug" Name="bugy_item">
+                            <MenuItem.Icon>
+                                <Image Source="/icons/bug.png" />
+                            </MenuItem.Icon>
+                        </MenuItem>
+                        <Separator />
+                        <MenuItem Header="_Visit Homepage" Name="homepage_item">
+                            <MenuItem.Icon>
+                                <Image Source="/icons/homepage.png" />
+                            </MenuItem.Icon>
+                        </MenuItem>
+                    </MenuItem>
+                </Menu>
+            </DockPanel>
+        </Grid>
+    </Grid>
+</Window>
