@@ -1,0 +1,14 @@
+﻿<Window x:Class="Weather_GUI.Select"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Weather_GUI"
+        mc:Ignorable="d"
+        Title="Select" Height="270" Width="490" Icon="Weather.ico" ResizeMode="CanMinimize">
+    <Grid>
+        <Button Content="Current Weather" Name="Current" Margin="10,10,271,0" VerticalAlignment="Top" Height="218" Click="Current_Click"/>
+        <Button Content="Forecast" Name="Forecast" HorizontalAlignment="Left" Margin="271,10,0,0" VerticalAlignment="Top" Width="202" Height="218" Click="Forecast_Click"/>
+
+    </Grid>
+</Window>
