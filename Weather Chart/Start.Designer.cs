@@ -53,7 +53,7 @@
             this.chart1.Size = new System.Drawing.Size(1215, 581);
             this.chart1.TabIndex = 0;
             this.chart1.TabStop = false;
-            this.chart1.Click += new System.EventHandler(this.chart1_Click);
+            this.chart1.MouseHover += new System.EventHandler(this.chart1_MouseHover);
             // 
             // city_txt
             // 

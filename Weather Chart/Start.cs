@@ -41,7 +41,7 @@ namespace Weather_Chart
                 MessageBox.Show(ex.ToString(), "Error occured");
             }
         }
-        private void SetValues(string city, string lang, string key)
+        public void SetValues(string city, string lang, string key)
         {
             string api = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&lang=" + lang + "&appid=" + key + "&mode=xml&units=metric";
             // System.Diagnostics.Process.Start(api);
@@ -173,9 +173,12 @@ namespace Weather_Chart
             }
         }
 
-        private void chart1_Click(object sender, EventArgs e)
+        private void chart1_MouseHover(object sender, EventArgs e)
         {
-
+            string temperatur = "Temperatur in °C";
+            string rain = "Rain in mm";
+            chart1.Series[temperatur].ToolTip = "\nDate: #VALX \nTemperatur: #VAL°C";
+            chart1.Series[rain].ToolTip = "\nDate: #VALX \nRain: #VALmm";
         }
     }
     public class Weather_Chart_Values
