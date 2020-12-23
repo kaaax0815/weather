@@ -45,7 +45,7 @@ namespace Weather_GUI
                 Clouds_txt.Text = i.Clouds.Name;
                 Weather_txt.Text = "";
                 if (i.Precipitation.Mode == "rain" || i.Precipitation.Mode == "snow") {
-                    Weather_txt.Text = i.Weather.Value + ": " + i.Precipitation.Value + "mm last " + i.Precipitation.Unit;
+                    Weather_txt.Text = i.Weather.Value + "\n" + i.Precipitation.Value + "mm last " + i.Precipitation.Unit;
                 }   
                 Image.Source = new BitmapImage(new Uri(@"/icons/" + i.Weather.Icon + ".png", UriKind.Relative));
 

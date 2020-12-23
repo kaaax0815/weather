@@ -163,15 +163,5 @@
     <Resource Include="icons\50d.png" />
     <Resource Include="icons\50n.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Resource Include="icons\bug.png" />
-    <Resource Include="icons\credits.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="icons\exit.png" />
-    <Resource Include="icons\homepage.png" />
-    <Resource Include="icons\language.png" />
-    <Resource Include="icons\location.png" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
