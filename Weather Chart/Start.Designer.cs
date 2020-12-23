@@ -34,6 +34,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Start));
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.city_txt = new System.Windows.Forms.TextBox();
+            this.area_radio = new System.Windows.Forms.RadioButton();
+            this.line_radio = new System.Windows.Forms.RadioButton();
+            this.step_radio = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -69,11 +72,49 @@
             this.city_txt.Size = new System.Drawing.Size(158, 36);
             this.city_txt.TabIndex = 1;
             // 
+            // area_radio
+            // 
+            this.area_radio.AutoSize = true;
+            this.area_radio.Location = new System.Drawing.Point(1117, 479);
+            this.area_radio.Name = "area_radio";
+            this.area_radio.Size = new System.Drawing.Size(47, 17);
+            this.area_radio.TabIndex = 2;
+            this.area_radio.TabStop = true;
+            this.area_radio.Text = "Area";
+            this.area_radio.UseVisualStyleBackColor = true;
+            this.area_radio.CheckedChanged += new System.EventHandler(this.area_radio_CheckedChanged);
+            // 
+            // line_radio
+            // 
+            this.line_radio.AutoSize = true;
+            this.line_radio.Location = new System.Drawing.Point(1117, 495);
+            this.line_radio.Name = "line_radio";
+            this.line_radio.Size = new System.Drawing.Size(45, 17);
+            this.line_radio.TabIndex = 3;
+            this.line_radio.TabStop = true;
+            this.line_radio.Text = "Line";
+            this.line_radio.UseVisualStyleBackColor = true;
+            this.line_radio.CheckedChanged += new System.EventHandler(this.line_radio_CheckedChanged);
+            // 
+            // step_radio
+            // 
+            this.step_radio.AutoSize = true;
+            this.step_radio.Location = new System.Drawing.Point(1117, 511);
+            this.step_radio.Name = "step_radio";
+            this.step_radio.Size = new System.Drawing.Size(70, 17);
+            this.step_radio.TabIndex = 4;
+            this.step_radio.TabStop = true;
+            this.step_radio.Text = "Step Line";
+            this.step_radio.UseVisualStyleBackColor = true;
+            // 
             // Start
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1204, 570);
+            this.Controls.Add(this.step_radio);
+            this.Controls.Add(this.line_radio);
+            this.Controls.Add(this.area_radio);
             this.Controls.Add(this.city_txt);
             this.Controls.Add(this.chart1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -91,5 +132,8 @@
 
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private System.Windows.Forms.TextBox city_txt;
+        private System.Windows.Forms.RadioButton area_radio;
+        private System.Windows.Forms.RadioButton line_radio;
+        private System.Windows.Forms.RadioButton step_radio;
     }
 }

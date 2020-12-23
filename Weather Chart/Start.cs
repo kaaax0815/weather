@@ -159,6 +159,8 @@ namespace Weather_Chart
                     chart1.Series[rain].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Area;
                     chart1.ChartAreas[0].RecalculateAxesScale();
                     chart1.Update();
+                    area_radio.Checked = true;
+                    line_radio.Checked = false;
                 }
             }
             catch (WebException ex)
@@ -179,6 +181,60 @@ namespace Weather_Chart
             string rain = "Rain in mm";
             chart1.Series[temperatur].ToolTip = "\nDate: #VALX \nTemperatur: #VAL°C";
             chart1.Series[rain].ToolTip = "\nDate: #VALX \nRain: #VALmm";
+        }
+
+        private void area_radio_CheckedChanged(object sender, EventArgs e)
+        {
+            string temperatur = "Temperatur in °C";
+            string rain = "Rain in mm";
+            if (area_radio.Checked) 
+            {
+                chart1.Series[temperatur].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Area;
+                chart1.Series[rain].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Area;
+                chart1.ChartAreas[0].RecalculateAxesScale();
+                chart1.Update();
+            }
+            else if (line_radio.Checked)
+            {
+                chart1.Series[temperatur].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+                chart1.Series[rain].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+                chart1.ChartAreas[0].RecalculateAxesScale();
+                chart1.Update();
+            }
+            else if (step_radio.Checked)
+            {
+                chart1.Series[temperatur].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StepLine;
+                chart1.Series[rain].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StepLine;
+                chart1.ChartAreas[0].RecalculateAxesScale();
+                chart1.Update();
+            }
+        }
+
+        private void line_radio_CheckedChanged(object sender, EventArgs e)
+        {
+            string temperatur = "Temperatur in °C";
+            string rain = "Rain in mm";
+            if (area_radio.Checked)
+            {
+                chart1.Series[temperatur].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Area;
+                chart1.Series[rain].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Area;
+                chart1.ChartAreas[0].RecalculateAxesScale();
+                chart1.Update();
+            }
+            else if (line_radio.Checked)
+            {
+                chart1.Series[temperatur].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+                chart1.Series[rain].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+                chart1.ChartAreas[0].RecalculateAxesScale();
+                chart1.Update();
+            }
+            else if (step_radio.Checked)
+            {
+                chart1.Series[temperatur].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StepLine;
+                chart1.Series[rain].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StepLine;
+                chart1.ChartAreas[0].RecalculateAxesScale();
+                chart1.Update();
+            }
         }
     }
     public class Weather_Chart_Values
